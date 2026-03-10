@@ -1,6 +1,7 @@
 services:
   askoheat-exporter:
-    build: .
+    # build: .
+    image: ghcr.io/aracloud/askoheat-prometheus-exporter:latest
     container_name: askoheat-exporter
     ports:
       - "9105:9105"
