@@ -1,0 +1,72 @@
+{
+"annotations": { "list": [] },
+"editable": true,
+"panels": [
+{
+"type": "stat",
+"title": "Boiler Temperature",
+"gridPos": { "h": 5, "w": 8, "x": 0, "y": 0 },
+"targets": [
+{ "expr": "askoheat_temperature_celsius", "refId": "A" }
+],
+"datasource": { "type": "prometheus", "uid": "prometheus" },
+"fieldConfig": { "defaults": { "unit": "celsius" } }
+},
+{
+"type": "stat",
+"title": "Heater Power",
+"gridPos": { "h": 5, "w": 8, "x": 8, "y": 0 },
+"targets": [
+{ "expr": "askoheat_power_watts", "refId": "A" }
+],
+"datasource": { "type": "Prometheus", "uid": "Prometheus" },
+"fieldConfig": { "defaults": { "unit": "watt" } }
+},
+{
+"type": "stat",
+"title": "Heater Step",
+"gridPos": { "h": 5, "w": 8, "x": 16, "y": 0 },
+"targets": [
+{ "expr": "askoheat_heater_step", "refId": "A" }
+],
+"datasource": { "type": "prometheus", "uid": "prometheus" }
+},
+{
+"type": "timeseries",
+"title": "Boiler Temperature History",
+"gridPos": { "h": 8, "w": 12, "x": 0, "y": 5 },
+"targets": [
+{ "expr": "askoheat_temperature_celsius", "refId": "A" }
+],
+"datasource": { "type": "Prometheus", "uid": "Prometheus" },
+"fieldConfig": { "defaults": { "unit": "celsius" } }
+},
+{
+"type": "timeseries",
+"title": "Heater Power History",
+"gridPos": { "h": 8, "w": 12, "x": 12, "y": 5 },
+"targets": [
+{ "expr": "askoheat_power_watts", "refId": "A" }
+],
+"datasource": { "type": "prometheus", "uid": "prometheus" },
+"fieldConfig": { "defaults": { "unit": "watt" } }
+},
+{
+"type": "timeseries",
+"title": "Heating Cycles",
+"gridPos": { "h": 8, "w": 24, "x": 0, "y": 13 },
+"targets": [
+{ "expr": "askoheat_heater_step", "refId": "A" }
+],
+"datasource": { "type": "prometheus", "uid": "prometheus" }
+}
+],
+"schemaVersion": 37,
+"style": "dark",
+"tags": ["askoheat","boiler","energy"],
+"templating": { "list": [] },
+"time": { "from": "now-24h", "to": "now" },
+"title": "ASKOHEAT Monitor",
+"version": 1
+}
+
