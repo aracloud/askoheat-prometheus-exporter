@@ -1,4 +1,4 @@
-# ASKOHEAT Prometheus Exporter
+# ASKOHEAT Prometheus Exporter (August 2026)
 
 Prometheus exporter for the **ASKOHEAT F+** boiler heating element.
 
